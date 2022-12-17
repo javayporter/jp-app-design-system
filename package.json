@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=15fa12689355"
   },
   "eslintConfig": {
     "extends": [
@@ -44,7 +45,14 @@
         {
           "absoluteRuntime": false
         }
+      ],
+      [
+        "@babel/preset-env",
+        "@babel/preset-react"
       ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
     ]
   },
   "browserslist": {
@@ -73,12 +81,24 @@
     "@storybook/react": "^6.5.14",
     "@storybook/testing-library": "^0.0.13",
     "auto": "^10.37.6",
+    "chromatic": "^6.13.1",
     "cross-env": "^7.0.3",
     "prettier": "^2.8.1"
   },
   "description": "JP app design system",
   "main": "dist/index.js",
-  "repository": "https://github.com/javayporter/jp-app-design-system.git",
-  "author": "javayscript javayscript@gmail.com",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javayporter/jp-app-design-system.git"
+  },
+  "author": {
+    "name": "javayscript javayscript@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javayporter/jp-app-design-system/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/javayporter/jp-app-design-system#readme",
+  "_id": "@javayporter/jp-app-design-system@0.1.1"
 }
